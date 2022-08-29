@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_header_height"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/nav_drawer_horizontal_margin"
+        android:paddingTop="@dimen/nav_drawer_vertical_margin"
+        android:paddingRight="@dimen/nav_drawer_horizontal_margin"
+        android:paddingBottom="@dimen/nav_drawer_vertical_margin"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <ImageView
+            android:id="@+id/profile_drawer_img"
+            android:layout_width="@dimen/drawer_profile_img_size"
+            android:layout_height="@dimen/drawer_profile_img_size"
+            android:contentDescription="@string/nav_header_desc"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_menu_profile_placeholder" />
+
+        <TextView
+            android:id="@+id/welcome_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:padding="0dp"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:text="@string/nav_header_welcome"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/welcome_text_drawer_menu"
+            android:textSize="@dimen/drawer_welcome_text_size"
+            app:layout_constraintEnd_toStartOf="@+id/arrow_drawer_img"
+            app:layout_constraintStart_toEndOf="@+id/profile_drawer_img"
+            app:layout_constraintTop_toTopOf="@+id/profile_drawer_img" />
+
+        <TextView
+            android:id="@+id/username_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_32sdp"
+            android:maxLines="3"
+            android:padding="0dp"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:text="Tony Roshdy"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/username_text_drawer_menu"
+            android:textSize="@dimen/drawer_username_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/welcome_txt"
+            app:layout_constraintTop_toBottomOf="@+id/welcome_txt"
+            tools:text="Walid Magid" />
+
+
+        <ImageView
+            android:id="@+id/arrow_drawer_img"
+            android:layout_width="@dimen/drawer_profile_img_size"
+            android:layout_height="@dimen/drawer_profile_img_size"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_menu_arrow"
+            android:translationX="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_drawer_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/profile_drawer_img"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

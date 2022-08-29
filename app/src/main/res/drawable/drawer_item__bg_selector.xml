@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/selected_nav_drawer_item_bg" android:state_checked="true" />
+    <item android:drawable="@color/white" />
+</selector>
